@@ -1,0 +1,13 @@
+[project]
+name = "batch-analytics"
+version = "0.2.0"
+description = "Standalone Spark recruitment warehouse, cached snapshots and explainable matching"
+requires-python = ">=3.12,<3.13"
+dependencies = ["pyspark[ml]==4.0.1", "fastapi==0.116.1", "uvicorn==0.35.0"]
+
+[dependency-groups]
+dev = ["pytest==8.4.2", "httpx==0.28.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "service_tests"]
+pythonpath = ["."]

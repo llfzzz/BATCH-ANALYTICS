@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+.env
+.env.*
+!.env.example
+config/*.local.json
+data/
+artifacts/
+warehouse/
+models/
+logs/
+spark-warehouse/
+.run.lock
+*.tmp

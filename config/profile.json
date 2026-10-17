@@ -1,0 +1,11 @@
+{
+  "profile_id": "anonymous-public-example",
+  "education": "本科",
+  "graduation_year": 2027,
+  "skills": ["python", "sql", "java", "mysql", "linux", "git"],
+  "target_roles": ["大数据开发", "数据开发", "数据工程"],
+  "target_employment": "实习",
+  "description": "Python SQL Java MySQL Linux Git data engineering ETL",
+  "location": {"name": "翻身地铁站（公共筛选中心示例）", "coordinate_system": "GCJ02", "longitude": 113.893232, "latitude": 22.559690, "radius_km": 5.0},
+  "note": "公开匿名画像示例，与任何个人简历无关；站点仅是公共偏好中心，不表示住址。真实画像建议保存在config/profile.local.json并通过--profile加载，不提交。"
+}

@@ -1,0 +1,3691 @@
+{
+  "project": "招聘离线数仓与 AI 岗位匹配",
+  "engine": "Apache Spark 4.0.1 / PySpark / MLlib",
+  "data_source": "公开固定种子合成岗位样例；所有公司、岗位均虚构。",
+  "generated_at": "2026-10-16T15:13:45.709890+00:00",
+  "summary": {
+    "ods_rows": 852,
+    "history_rows": 778,
+    "quarantine_rows": 72,
+    "source_latest_rows": 565,
+    "unique_jobs": 554,
+    "active_jobs": 533,
+    "closed_jobs": 21,
+    "eligible_jobs": 124,
+    "batches": 3,
+    "new_batches": 0,
+    "duplicate_rows_removed": 2,
+    "cross_source_duplicates_removed": 11,
+    "missing_location_jobs": 28,
+    "salary_unknown_jobs": 106,
+    "runtime_seconds": 9.58,
+    "total_jobs": 852,
+    "input_jobs": 852,
+    "clean_jobs": 778,
+    "valid_jobs": 778,
+    "matched_jobs": 124,
+    "unique_companies": 533,
+    "within_5km": 275,
+    "median_salary": 7500.0
+  },
+  "version": "0.2.0",
+  "exclusion_summary": [
+    {
+      "reason": "outside_radius",
+      "count": 241
+    },
+    {
+      "reason": "target_role",
+      "count": 221
+    },
+    {
+      "reason": "employment_type",
+      "count": 79
+    },
+    {
+      "reason": "education",
+      "count": 50
+    },
+    {
+      "reason": "graduation_year",
+      "count": 33
+    },
+    {
+      "reason": "location_unknown_or_system",
+      "count": 29
+    },
+    {
+      "reason": "closed",
+      "count": 21
+    }
+  ],
+  "matches": [
+    {
+      "job_id": "3dcf19ac2c978813475b8612",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0206",
+      "address": "虚构办公点0206（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.051,
+      "score": 0.8364,
+      "matched_skills": [
+        "git",
+        "linux",
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00206",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 SQL Linux Python Git MySQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "linux",
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 1,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "git",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "a84d2114e030e13ad54a0645",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0281",
+      "address": "虚构办公点0281（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.116,
+      "score": 0.7803,
+      "matched_skills": [
+        "git",
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "hive"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00281",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Linux Git MySQL Python Hive，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "hive",
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 2,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "git",
+        "hive",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "ddf6a38f3a9bd0f04e6675b5",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0186",
+      "address": "虚构办公点0186（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.375,
+      "score": 0.7637,
+      "matched_skills": [
+        "git",
+        "linux",
+        "mysql",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00186",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 MySQL Hive Linux Git SQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "hive",
+        "linux",
+        "mysql",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 3,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "git",
+        "hive",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "a07839878d419351871bd65c",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0166",
+      "address": "虚构办公点0166（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.538,
+      "score": 0.7637,
+      "matched_skills": [
+        "git",
+        "linux",
+        "mysql",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00166",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Hive Git Linux MySQL SQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "hive",
+        "linux",
+        "mysql",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 4,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "git",
+        "hive",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "5a123dfc5b9e281c4b4c7a20",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0111",
+      "address": "虚构办公点0111（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.466,
+      "score": 0.7303,
+      "matched_skills": [
+        "git",
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00111",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 SQL Git Python PySpark MySQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "mysql",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 5,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "git",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "0cf5f0e5ff902cd2def80d56",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0381",
+      "address": "虚构办公点0381（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.528,
+      "score": 0.7087,
+      "matched_skills": [
+        "git",
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "airflow"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00381",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Python Linux Airflow Git MySQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "git",
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 6,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "git",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "43c65710a457a9ac39e6c816",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0191",
+      "address": "虚构办公点0191（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 2.788,
+      "score": 0.6934,
+      "matched_skills": [
+        "git",
+        "linux",
+        "mysql",
+        "sql"
+      ],
+      "missing_skills": [
+        "airflow",
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00191",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Airflow Linux SQL MySQL Git，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "git",
+        "linux",
+        "mysql",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 7,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "git",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "d88e8f0b873a65710f053739",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0541",
+      "address": "虚构办公点0541（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.125,
+      "score": 0.6882,
+      "matched_skills": [
+        "git",
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00541",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Python SQL Hive Git MySQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "hive",
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 8,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "git",
+        "hive",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "8260a44ad88743b4fb906218",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0446",
+      "address": "虚构办公点0446（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.627,
+      "score": 0.6734,
+      "matched_skills": [
+        "git",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00446",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Hive PySpark MySQL Git Python，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "hive",
+        "mysql",
+        "python",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 9,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "git",
+        "hive",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "b6700199ecba185df0a00a6a",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0431",
+      "address": "虚构办公点0431（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 2.026,
+      "score": 0.627,
+      "matched_skills": [
+        "linux",
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00431",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 PySpark Python SQL Linux MySQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "linux",
+        "mysql",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 10,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "linux",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "10ef2907cf0a271b8ec8d06e",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0150",
+      "address": "虚构办公点0150（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.367,
+      "score": 0.5955,
+      "matched_skills": [
+        "java",
+        "linux",
+        "python"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00150",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Java Python Linux Spark Hive，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "java",
+        "linux",
+        "python",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 11,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hive",
+        "java",
+        "linux",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "d29f241a1cc8e73a2963b9db",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0075",
+      "address": "虚构办公点0075（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.281,
+      "score": 0.5797,
+      "matched_skills": [
+        "java",
+        "linux",
+        "sql"
+      ],
+      "missing_skills": [
+        "kafka",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00075",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Spark SQL Kafka Linux Java，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "java",
+        "kafka",
+        "linux",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 12,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "java",
+        "kafka",
+        "linux",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "kafka",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "3c0b4469f1e5b6c754f2c62d",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0271",
+      "address": "虚构办公点0271（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.675,
+      "score": 0.5791,
+      "matched_skills": [
+        "git",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00271",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Python MySQL Git Airflow Hive，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 13,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "9e1070ee66ae7fbd7f8cb407",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0261",
+      "address": "虚构办公点0261（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.932,
+      "score": 0.5791,
+      "matched_skills": [
+        "git",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00261",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Python Hive Git Airflow MySQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 14,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "2115c7c9ca6d8cd1682314f5",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0421",
+      "address": "虚构办公点0421（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.533,
+      "score": 0.5791,
+      "matched_skills": [
+        "git",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00421",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Python Airflow Hive MySQL Git，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 15,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "2ed204772c29cb58762711de",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0376",
+      "address": "虚构办公点0376（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.067,
+      "score": 0.5749,
+      "matched_skills": [
+        "git",
+        "linux",
+        "python"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00376",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Git PySpark Linux Hive Python，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "hive",
+        "linux",
+        "python",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 16,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "git",
+        "hive",
+        "linux",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "a4ccf3b563738ca20e585833",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0346",
+      "address": "虚构办公点0346（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.503,
+      "score": 0.5749,
+      "matched_skills": [
+        "git",
+        "linux",
+        "python"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00346",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Git Python PySpark Linux Hive，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "hive",
+        "linux",
+        "python",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 17,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "git",
+        "hive",
+        "linux",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "fa3cd0368167af43540db35f",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0291",
+      "address": "虚构办公点0291（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 2.657,
+      "score": 0.5674,
+      "matched_skills": [
+        "git",
+        "mysql",
+        "sql"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00291",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Git MySQL SQL Hive Airflow，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 18,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "4c8271165183fb37e391c624",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0296",
+      "address": "虚构办公点0296（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 2.745,
+      "score": 0.5585,
+      "matched_skills": [
+        "git",
+        "mysql"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00296",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Git PySpark MySQL Airflow Hive，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 19,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [],
+      "preferred_skills": [
+        "airflow",
+        "git",
+        "hive",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "d1339ce027f766d17f799d9f",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0235",
+      "address": "虚构办公点0235（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 2.603,
+      "score": 0.5559,
+      "matched_skills": [
+        "java",
+        "linux",
+        "python"
+      ],
+      "missing_skills": [
+        "hive",
+        "kafka"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00235",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Python Linux Java Kafka Hive，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "linux",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 20,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "linux"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "kafka"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "ab311158478e43ed6af33789",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0226",
+      "address": "虚构办公点0226（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 2.737,
+      "score": 0.5516,
+      "matched_skills": [
+        "linux",
+        "mysql",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00226",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 MySQL Hive SQL PySpark Linux，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "linux",
+        "mysql",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 21,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "hive",
+        "linux",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "4462ba9ad4856b8ab451eeae",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0395",
+      "address": "虚构办公点0395（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 4.871,
+      "score": 0.5429,
+      "matched_skills": [
+        "java",
+        "linux",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "kafka"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00395",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Hive Linux Java SQL Kafka，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "linux",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 22,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "linux"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "kafka"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "391859747ae5bf62ea1c79a5",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0146",
+      "address": "虚构办公点0146（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.959,
+      "score": 0.5097,
+      "matched_skills": [
+        "git",
+        "linux",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "airflow",
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00146",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Airflow Linux Git Python SQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "git",
+        "linux",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 23,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "git",
+        "linux"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "2c767838611d7c285fb27dbf",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0415",
+      "address": "虚构办公点0415（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 4.57,
+      "score": 0.4835,
+      "matched_skills": [
+        "java",
+        "linux",
+        "python"
+      ],
+      "missing_skills": [
+        "hadoop",
+        "hive"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00415",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Hive Java Python Hadoop Linux，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "linux",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 24,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "linux"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hadoop",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "18584c1e93456d19d20e54be",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0485",
+      "address": "虚构办公点0485（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 4.773,
+      "score": 0.4819,
+      "matched_skills": [
+        "java",
+        "linux",
+        "python"
+      ],
+      "missing_skills": [
+        "hadoop",
+        "kafka"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00485",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Hadoop Java Kafka Python Linux，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hadoop",
+        "java",
+        "kafka",
+        "linux",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 25,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hadoop",
+        "java",
+        "kafka",
+        "linux"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hadoop",
+        "kafka"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "26ee4dd288f731f3d96972d0",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0310",
+      "address": "虚构办公点0310（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.79,
+      "score": 0.476,
+      "matched_skills": [
+        "java",
+        "linux",
+        "python"
+      ],
+      "missing_skills": [
+        "flink",
+        "kafka"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00310",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Flink Python Linux Java Kafka，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "flink",
+        "java",
+        "kafka",
+        "linux",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 26,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "flink",
+        "java",
+        "kafka",
+        "linux"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "flink",
+        "kafka"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "cef721f6e5ba45fc9022be58",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0270",
+      "address": "虚构办公点0270（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.396,
+      "score": 0.4747,
+      "matched_skills": [
+        "java",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00270",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Python Java Hive Spark SQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "java",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 27,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "hive",
+        "java",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "ebb541e5330d5f7c47344e70",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0450",
+      "address": "虚构办公点0450（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 4.973,
+      "score": 0.4747,
+      "matched_skills": [
+        "java",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00450",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Java Hive SQL Python Spark，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "java",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 28,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "hive",
+        "java",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "019b0da9d0c6b4bba594006e",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0311",
+      "address": "虚构办公点0311（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 2.24,
+      "score": 0.4706,
+      "matched_skills": [
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00311",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Python MySQL Hive Airflow Linux，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "hive",
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 29,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "hive",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "d38ff6de32e857587ead5d2b",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0426",
+      "address": "虚构办公点0426（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.84,
+      "score": 0.4706,
+      "matched_skills": [
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00426",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Hive Python Linux Airflow MySQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "hive",
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 30,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "hive",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "b04ef72fb70c0a3ab0c94422",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0516",
+      "address": "虚构办公点0516（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.6,
+      "score": 0.4706,
+      "matched_skills": [
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00516",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 MySQL Python Hive Linux Airflow，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "hive",
+        "linux",
+        "mysql",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 31,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "hive",
+        "linux",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "27aa2be1b475741798cc6734",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0480",
+      "address": "虚构办公点0480（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 2.34,
+      "score": 0.4629,
+      "matched_skills": [
+        "java",
+        "linux"
+      ],
+      "missing_skills": [
+        "hadoop",
+        "kafka",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00480",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Linux Java Kafka Spark Hadoop，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hadoop",
+        "java",
+        "kafka",
+        "linux",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 32,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [],
+      "preferred_skills": [
+        "hadoop",
+        "java",
+        "kafka",
+        "linux",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hadoop",
+        "kafka",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "dc6001331adc19ce7531c0d2",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0460",
+      "address": "虚构办公点0460（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 4.525,
+      "score": 0.4573,
+      "matched_skills": [
+        "java",
+        "linux"
+      ],
+      "missing_skills": [
+        "flink",
+        "kafka",
+        "spark"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00460",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Java Flink Spark Kafka Linux，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "flink",
+        "java",
+        "kafka",
+        "linux",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 33,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [],
+      "preferred_skills": [
+        "flink",
+        "java",
+        "kafka",
+        "linux",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "flink",
+        "kafka",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "0372e9a8159969edf5a0fa0e",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0006",
+      "address": "虚构办公点0006（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.644,
+      "score": 0.4503,
+      "matched_skills": [
+        "git",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00006",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Git Hive SQL PySpark Python，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "git",
+        "hive",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 34,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "git",
+        "hive",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "e839011b016e8e36f4f9299d",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0101",
+      "address": "虚构办公点0101（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 2.896,
+      "score": 0.4489,
+      "matched_skills": [
+        "linux",
+        "mysql"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00101",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Hive PySpark MySQL Linux Airflow，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "hive",
+        "linux",
+        "mysql",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 35,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [],
+      "preferred_skills": [
+        "airflow",
+        "hive",
+        "linux",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "c6838753506f41ef89d8ba78",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0536",
+      "address": "虚构办公点0536（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 2.292,
+      "score": 0.4382,
+      "matched_skills": [
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00536",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Python SQL MySQL Hive PySpark，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "mysql",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 36,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "hive",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "9f022bb91438e0143a11db5b",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0535",
+      "address": "虚构办公点0535（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 1.293,
+      "score": 0.4346,
+      "matched_skills": [
+        "java",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "kafka"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00535",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Java Python Hive SQL Kafka，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "python",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 37,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "hive",
+        "java",
+        "kafka"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "kafka"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "16c76bd899f0acafaafb2b52",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0575",
+      "address": "虚构办公点0575（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.561,
+      "score": 0.4251,
+      "matched_skills": [
+        "java",
+        "python"
+      ],
+      "missing_skills": [
+        "hive",
+        "kafka",
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00575",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Python Hive Java Kafka Spark，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "python",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 38,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "kafka",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "a92feb3e88c59c68a9c23434",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0445",
+      "address": "虚构办公点0445（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.785,
+      "score": 0.4095,
+      "matched_skills": [
+        "java",
+        "sql"
+      ],
+      "missing_skills": [
+        "hive",
+        "kafka",
+        "spark"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00445",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Spark Hive Kafka SQL Java，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 39,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "hive",
+        "java",
+        "kafka",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hive",
+        "kafka",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "da8fc1b65471619d630f9291",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0515",
+      "address": "虚构办公点0515（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.067,
+      "score": 0.3817,
+      "matched_skills": [
+        "java",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "flink",
+        "spark"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00515",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Spark SQL Python Flink Java，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "flink",
+        "java",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 40,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "flink",
+        "java",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "flink",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "f51d69f183eed3eb1c0825ab",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0246",
+      "address": "虚构办公点0246（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.155,
+      "score": 0.3691,
+      "matched_skills": [
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "airflow",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00246",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 SQL MySQL Python PySpark Airflow，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "mysql",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 41,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "968af1e5e7bf448efadcc801",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0046",
+      "address": "虚构办公点0046（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 4.17,
+      "score": 0.3691,
+      "matched_skills": [
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "airflow",
+        "spark"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00046",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Python Airflow MySQL PySpark SQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "mysql",
+        "python",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 42,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "80af483482d2c94ce44340bb",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0215",
+      "address": "虚构办公点0215（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.509,
+      "score": 0.3612,
+      "matched_skills": [
+        "java",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "flink",
+        "hive"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00215",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Java Flink Python SQL Hive，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "flink",
+        "hive",
+        "java",
+        "python",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 43,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "flink",
+        "hive",
+        "java"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "flink",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "1ef8864d81b05e16fc779cca",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0375",
+      "address": "虚构办公点0375（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 4.878,
+      "score": 0.3608,
+      "matched_skills": [
+        "java",
+        "python"
+      ],
+      "missing_skills": [
+        "hadoop",
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00375",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Python Java Hive Spark Hadoop，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "python",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 44,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hadoop",
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "2a13ffc5e99dfae6d4c42c08",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0521",
+      "address": "虚构办公点0521（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 1.958,
+      "score": 0.3477,
+      "matched_skills": [
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive"
+      ],
+      "source": "synthetic-referral-c",
+      "source_job_id": "S-00521",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 SQL MySQL Python Hive Airflow，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "hive",
+        "mysql",
+        "python",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 45,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "hive",
+        "mysql"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "35cba7b50854d3c19a123793",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0580",
+      "address": "虚构办公点0580（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 2.51,
+      "score": 0.3461,
+      "matched_skills": [
+        "java",
+        "sql"
+      ],
+      "missing_skills": [
+        "hadoop",
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00580",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Hive Java Spark Hadoop SQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "spark",
+        "sql"
+      ],
+      "synthetic": true,
+      "rank": 46,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "sql"
+      ],
+      "preferred_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hadoop",
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "c99e28cca79d8c4154f39a34",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0505",
+      "address": "虚构办公点0505（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 2.318,
+      "score": 0.3422,
+      "matched_skills": [
+        "java",
+        "python"
+      ],
+      "missing_skills": [
+        "hadoop",
+        "hive",
+        "kafka"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00505",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Python Kafka Hadoop Hive Java，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "kafka",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 47,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "kafka"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hadoop",
+        "hive",
+        "kafka"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "d11c38c729f9c7c981c19494",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0020",
+      "address": "虚构办公点0020（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.178,
+      "score": 0.3422,
+      "matched_skills": [
+        "java",
+        "python"
+      ],
+      "missing_skills": [
+        "hadoop",
+        "hive",
+        "kafka"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "MIRROR-S-00020",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Python Java Kafka Hive Hadoop，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "kafka",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 48,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "kafka"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hadoop",
+        "hive",
+        "kafka"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "ed7aad31a78b001cc4736a10",
+      "title": "大数据开发实习生",
+      "role": "大数据开发",
+      "company": "虚构·宝安数据实验室0370",
+      "address": "虚构办公点0370（仅演示）",
+      "city": "深圳",
+      "salary_text": "200-300元/天",
+      "salary_monthly_min": 4350.0,
+      "salary_monthly_max": 6525.0,
+      "distance_km": 3.412,
+      "score": 0.3422,
+      "matched_skills": [
+        "java",
+        "python"
+      ],
+      "missing_skills": [
+        "hadoop",
+        "hive",
+        "kafka"
+      ],
+      "source": "synthetic-open-b",
+      "source_job_id": "S-00370",
+      "description": "【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Python Hive Java Kafka Hadoop，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-10",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "kafka",
+        "python"
+      ],
+      "synthetic": true,
+      "rank": 49,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "hadoop",
+        "hive",
+        "java",
+        "kafka"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "hadoop",
+        "hive",
+        "kafka"
+      ],
+      "exclusion_reasons": []
+    },
+    {
+      "job_id": "ba689d8287d791860018736d",
+      "title": "数据开发实习生",
+      "role": "数据开发",
+      "company": "虚构·宝安数据实验室0096",
+      "address": "虚构办公点0096（仅演示）",
+      "city": "深圳",
+      "salary_text": "6-9K/月",
+      "salary_monthly_min": 6000.0,
+      "salary_monthly_max": 9000.0,
+      "distance_km": 3.72,
+      "score": 0.3402,
+      "matched_skills": [
+        "mysql",
+        "python"
+      ],
+      "missing_skills": [
+        "airflow",
+        "hive",
+        "spark"
+      ],
+      "source": "synthetic-campus-a",
+      "source_job_id": "S-00096",
+      "description": "【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Airflow PySpark Hive Python MySQL，完成 SQL 开发与 pipeline 维护。",
+      "snapshot_date": "2026-10-12",
+      "employment_type": "实习",
+      "education": "本科",
+      "grad_min": 2026,
+      "grad_max": 2027,
+      "canonical_skills": [
+        "airflow",
+        "hive",
+        "mysql",
+        "python",
+        "spark"
+      ],
+      "synthetic": true,
+      "rank": 50,
+      "coordinate_system": "GCJ02",
+      "source_url": null,
+      "required_skills": [
+        "python"
+      ],
+      "preferred_skills": [
+        "airflow",
+        "hive",
+        "mysql",
+        "spark"
+      ],
+      "missing_required_skills": [],
+      "missing_preferred_skills": [
+        "airflow",
+        "hive",
+        "spark"
+      ],
+      "exclusion_reasons": []
+    }
+  ],
+  "skill_demand": [
+    {
+      "skill": "python",
+      "count": 320
+    },
+    {
+      "skill": "sql",
+      "count": 311
+    },
+    {
+      "skill": "spark",
+      "count": 286
+    },
+    {
+      "skill": "hive",
+      "count": 145
+    },
+    {
+      "skill": "kafka",
+      "count": 140
+    },
+    {
+      "skill": "linux",
+      "count": 119
+    },
+    {
+      "skill": "css",
+      "count": 106
+    },
+    {
+      "skill": "javascript",
+      "count": 106
+    },
+    {
+      "skill": "react",
+      "count": 106
+    },
+    {
+      "skill": "typescript",
+      "count": 106
+    },
+    {
+      "skill": "excel",
+      "count": 105
+    },
+    {
+      "skill": "pandas",
+      "count": 105
+    },
+    {
+      "skill": "机器学习",
+      "count": 105
+    },
+    {
+      "skill": "rag",
+      "count": 87
+    },
+    {
+      "skill": "etl",
+      "count": 79
+    },
+    {
+      "skill": "docker",
+      "count": 73
+    },
+    {
+      "skill": "mysql",
+      "count": 66
+    },
+    {
+      "skill": "airflow",
+      "count": 64
+    },
+    {
+      "skill": "git",
+      "count": 63
+    },
+    {
+      "skill": "java",
+      "count": 58
+    },
+    {
+      "skill": "hadoop",
+      "count": 53
+    },
+    {
+      "skill": "flink",
+      "count": 49
+    }
+  ],
+  "salary_by_role": [
+    {
+      "role": "前端开发",
+      "job_count": 106,
+      "known_salary_count": 0,
+      "avg_monthly_salary": null,
+      "min_monthly_salary": null,
+      "max_monthly_salary": null
+    },
+    {
+      "role": "大数据开发",
+      "job_count": 106,
+      "known_salary_count": 106,
+      "avg_monthly_salary": 5437.5,
+      "min_monthly_salary": 4350.0,
+      "max_monthly_salary": 6525.0
+    },
+    {
+      "role": "数据分析",
+      "job_count": 105,
+      "known_salary_count": 105,
+      "avg_monthly_salary": 6525.0,
+      "min_monthly_salary": 5220.0,
+      "max_monthly_salary": 7830.0
+    },
+    {
+      "role": "数据工程",
+      "job_count": 109,
+      "known_salary_count": 109,
+      "avg_monthly_salary": 16250.0,
+      "min_monthly_salary": 12500.0,
+      "max_monthly_salary": 20000.0
+    },
+    {
+      "role": "数据开发",
+      "job_count": 107,
+      "known_salary_count": 107,
+      "avg_monthly_salary": 7500.0,
+      "min_monthly_salary": 6000.0,
+      "max_monthly_salary": 9000.0
+    }
+  ],
+  "skill_trend": [
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "python",
+      "count": 18,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "sql",
+      "count": 17,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "hive",
+      "count": 10,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "spark",
+      "count": 10,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "kafka",
+      "count": 9,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "css",
+      "count": 6,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "javascript",
+      "count": 6,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "linux",
+      "count": 6,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "react",
+      "count": 6,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "typescript",
+      "count": 6,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "excel",
+      "count": 5,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "pandas",
+      "count": 5,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "机器学习",
+      "count": 5,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "airflow",
+      "count": 4,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "etl",
+      "count": 4,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "flink",
+      "count": 4,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "rag",
+      "count": 3,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "docker",
+      "count": 2,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "git",
+      "count": 2,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "hadoop",
+      "count": 2,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "java",
+      "count": 2,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-09",
+      "skill": "mysql",
+      "count": 2,
+      "change": null
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "python",
+      "count": 331,
+      "change": 313
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "sql",
+      "count": 324,
+      "change": 307
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "spark",
+      "count": 199,
+      "change": 189
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "hive",
+      "count": 150,
+      "change": 140
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "kafka",
+      "count": 143,
+      "change": 134
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "linux",
+      "count": 126,
+      "change": 120
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "css",
+      "count": 111,
+      "change": 105
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "javascript",
+      "count": 111,
+      "change": 105
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "react",
+      "count": 111,
+      "change": 105
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "typescript",
+      "count": 111,
+      "change": 105
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "excel",
+      "count": 110,
+      "change": 105
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "pandas",
+      "count": 110,
+      "change": 105
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "机器学习",
+      "count": 110,
+      "change": 105
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "rag",
+      "count": 87,
+      "change": 84
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "etl",
+      "count": 81,
+      "change": 77
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "docker",
+      "count": 75,
+      "change": 73
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "airflow",
+      "count": 67,
+      "change": 63
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "git",
+      "count": 67,
+      "change": 65
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "mysql",
+      "count": 67,
+      "change": 65
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "java",
+      "count": 61,
+      "change": 59
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "hadoop",
+      "count": 57,
+      "change": 55
+    },
+    {
+      "as_of_date": "2026-10-10",
+      "skill": "flink",
+      "count": 51,
+      "change": 47
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "python",
+      "count": 331,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "sql",
+      "count": 324,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "spark",
+      "count": 199,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "hive",
+      "count": 150,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "kafka",
+      "count": 143,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "linux",
+      "count": 126,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "css",
+      "count": 111,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "javascript",
+      "count": 111,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "react",
+      "count": 111,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "typescript",
+      "count": 111,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "excel",
+      "count": 110,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "pandas",
+      "count": 110,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "机器学习",
+      "count": 110,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "rag",
+      "count": 87,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "etl",
+      "count": 81,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "docker",
+      "count": 75,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "airflow",
+      "count": 67,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "git",
+      "count": 67,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "mysql",
+      "count": 67,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "java",
+      "count": 61,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "hadoop",
+      "count": 57,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-11",
+      "skill": "flink",
+      "count": 51,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "python",
+      "count": 320,
+      "change": -11
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "sql",
+      "count": 311,
+      "change": -13
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "spark",
+      "count": 286,
+      "change": 87
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "hive",
+      "count": 145,
+      "change": -5
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "kafka",
+      "count": 140,
+      "change": -3
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "linux",
+      "count": 119,
+      "change": -7
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "css",
+      "count": 106,
+      "change": -5
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "javascript",
+      "count": 106,
+      "change": -5
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "react",
+      "count": 106,
+      "change": -5
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "typescript",
+      "count": 106,
+      "change": -5
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "excel",
+      "count": 105,
+      "change": -5
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "pandas",
+      "count": 105,
+      "change": -5
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "机器学习",
+      "count": 105,
+      "change": -5
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "rag",
+      "count": 87,
+      "change": 0
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "etl",
+      "count": 79,
+      "change": -2
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "docker",
+      "count": 73,
+      "change": -2
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "mysql",
+      "count": 66,
+      "change": -1
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "airflow",
+      "count": 64,
+      "change": -3
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "git",
+      "count": 63,
+      "change": -4
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "java",
+      "count": 58,
+      "change": -3
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "hadoop",
+      "count": 53,
+      "change": -4
+    },
+    {
+      "as_of_date": "2026-10-12",
+      "skill": "flink",
+      "count": 49,
+      "change": -2
+    }
+  ],
+  "quality": {
+    "quarantined": 72,
+    "reasons": [
+      {
+        "quality_reason": "corrupt_json;missing_required_field;invalid_snapshot_time;invalid_status",
+        "count": 1
+      },
+      {
+        "quality_reason": "invalid_coordinates",
+        "count": 1
+      },
+      {
+        "quality_reason": "invalid_graduation_range",
+        "count": 66
+      },
+      {
+        "quality_reason": "invalid_salary_range",
+        "count": 1
+      },
+      {
+        "quality_reason": "invalid_snapshot_time",
+        "count": 1
+      },
+      {
+        "quality_reason": "invalid_status",
+        "count": 1
+      },
+      {
+        "quality_reason": "missing_required_field",
+        "count": 1
+      }
+    ],
+    "samples": [
+      {
+        "batch_id": "batch-20261010",
+        "source_job_id": "S-00000",
+        "quality_reason": "invalid_graduation_range",
+        "raw_line": "{\"source\": \"synthetic-campus-a\", \"source_job_id\": \"S-00000\", \"snapshot_ts\": \"2026-10-10T09:00:00+08:00\", \"title\": \"大数据开发工程师\", \"role\": \"大数据开发\", \"company\": \"虚构·宝安数据实验室0000\", \"address\": \"虚构办公点0000（仅演示）\", \"city\": \"深圳\", \"employment_type\": \"全职\", \"education\": \"硕士\", \"graduation_year_min\": 2028, \"graduation_year_max\": 2026, \"salary_text\": \"200-300元/天\", \"skills\": [\"Hadoop\", \"Linux\", \"Flink\", \"Kafka\", \"Python\"], \"required_skills\": [\"Python\"], \"preferred_skills\": [\"Hadoop\", \"Linux\", \"Flink\", \"Kafka\"], \"description\": \"【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Hadoop Linux Flink Kafka Python，完成 SQL 开发与 pipeline 维护。\", \"longitude\": null, \"latitude\": null, \"coordinate_system\": \"GCJ02\", \"status\": \"active\", \"synthetic\": true, \"source_url\": null}"
+      },
+      {
+        "batch_id": "batch-20261010",
+        "source_job_id": "S-00039",
+        "quality_reason": "invalid_graduation_range",
+        "raw_line": "{\"source\": \"synthetic-campus-a\", \"source_job_id\": \"S-00039\", \"snapshot_ts\": \"2026-10-10T09:00:00+08:00\", \"title\": \"前端开发实习生\", \"role\": \"前端开发\", \"company\": \"虚构·宝安数据实验室0039\", \"address\": \"虚构办公点0039（仅演示）\", \"city\": \"深圳\", \"employment_type\": \"实习\", \"education\": \"本科\", \"graduation_year_min\": 2028, \"graduation_year_max\": 2027, \"salary_text\": \"面议\", \"skills\": [\"JavaScript\", \"CSS\", \"React\", \"TypeScript\"], \"required_skills\": [], \"preferred_skills\": [\"JavaScript\", \"CSS\", \"React\", \"TypeScript\"], \"description\": \"【完全虚构数据】参与前端开发，负责 ETL 数据质量与数据建模。要求 JavaScript CSS React TypeScript，完成 SQL 开发与 pipeline 维护。\", \"longitude\": 113.9085964519672, \"latitude\": 22.597937491026187, \"coordinate_system\": \"GCJ02\", \"status\": \"active\", \"synthetic\": true, \"source_url\": null}"
+      },
+      {
+        "batch_id": "batch-20261010",
+        "source_job_id": "S-00078",
+        "quality_reason": "invalid_graduation_range",
+        "raw_line": "{\"source\": \"synthetic-campus-a\", \"source_job_id\": \"S-00078\", \"snapshot_ts\": \"2026-10-10T09:00:00+08:00\", \"title\": \"数据分析实习生\", \"role\": \"数据分析\", \"company\": \"虚构·宝安数据实验室0078\", \"address\": \"虚构办公点0078（仅演示）\", \"city\": \"深圳\", \"employment_type\": \"实习\", \"education\": \"本科\", \"graduation_year_min\": 2028, \"graduation_year_max\": 2027, \"salary_text\": \"30-45元/小时\", \"skills\": [\"Python\", \"机器学习\", \"Excel\", \"SQL\", \"Pandas\"], \"required_skills\": [\"Python\", \"SQL\"], \"preferred_skills\": [\"机器学习\", \"Excel\", \"Pandas\"], \"description\": \"【完全虚构数据】参与数据分析，负责 ETL 数据质量与数据建模。要求 Python 机器学习 Excel SQL Pandas，完成 SQL 开发与 pipeline 维护。\", \"longitude\": 113.92328351134717, \"latitude\": 22.52285869570475, \"coordinate_system\": \"GCJ02\", \"status\": \"active\", \"synthetic\": true, \"source_url\": null}"
+      },
+      {
+        "batch_id": "batch-20261010",
+        "source_job_id": "S-00117",
+        "quality_reason": "invalid_graduation_range",
+        "raw_line": "{\"source\": \"synthetic-campus-a\", \"source_job_id\": \"S-00117\", \"snapshot_ts\": \"2026-10-10T09:00:00+08:00\", \"title\": \"数据工程实习生\", \"role\": \"数据工程\", \"company\": \"虚构·宝安数据实验室0117\", \"address\": \"虚构办公点0117（仅演示）\", \"city\": \"深圳\", \"employment_type\": \"实习\", \"education\": \"本科\", \"graduation_year_min\": 2028, \"graduation_year_max\": 2027, \"salary_text\": \"15-24万/年\", \"skills\": [\"ETL\", \"Kafka\", \"Docker\", \"Python\", \"SQL\"], \"required_skills\": [\"Python\", \"SQL\"], \"preferred_skills\": [\"ETL\", \"Kafka\", \"Docker\"], \"description\": \"【完全虚构数据】参与数据工程，负责 ETL 数据质量与数据建模。要求 ETL Kafka Docker Python SQL，完成 SQL 开发与 pipeline 维护。\", \"longitude\": 113.89908489729659, \"latitude\": 22.512474359678453, \"coordinate_system\": \"GCJ02\", \"status\": \"active\", \"synthetic\": true, \"source_url\": null}"
+      },
+      {
+        "batch_id": "batch-20261010",
+        "source_job_id": "S-00156",
+        "quality_reason": "invalid_graduation_range",
+        "raw_line": "{\"source\": \"synthetic-campus-a\", \"source_job_id\": \"S-00156\", \"snapshot_ts\": \"2026-10-10T09:00:00+08:00\", \"title\": \"数据开发实习生\", \"role\": \"数据开发\", \"company\": \"虚构·宝安数据实验室0156\", \"address\": \"虚构办公点0156（仅演示）\", \"city\": \"深圳\", \"employment_type\": \"实习\", \"education\": \"本科\", \"graduation_year_min\": 2028, \"graduation_year_max\": 2027, \"salary_text\": \"6-9K/月\", \"skills\": [\"Git\", \"PySpark\", \"Airflow\", \"SQL\", \"Python\"], \"required_skills\": [\"SQL\", \"Python\"], \"preferred_skills\": [\"Git\", \"PySpark\", \"Airflow\"], \"description\": \"【完全虚构数据】参与数据开发，负责 ETL 数据质量与数据建模。要求 Git PySpark Airflow SQL Python，完成 SQL 开发与 pipeline 维护。\", \"longitude\": 113.85055151983184, \"latitude\": 22.559972763444566, \"coordinate_system\": \"GCJ02\", \"status\": \"active\", \"synthetic\": true, \"source_url\": null}"
+      },
+      {
+        "batch_id": "batch-20261010",
+        "source_job_id": "S-00195",
+        "quality_reason": "invalid_graduation_range",
+        "raw_line": "{\"source\": \"synthetic-campus-a\", \"source_job_id\": \"S-00195\", \"snapshot_ts\": \"2026-10-10T09:00:00+08:00\", \"title\": \"大数据开发实习生\", \"role\": \"大数据开发\", \"company\": \"虚构·宝安数据实验室0195\", \"address\": \"虚构办公点0195（仅演示）\", \"city\": \"深圳\", \"employment_type\": \"实习\", \"education\": \"本科\", \"graduation_year_min\": 2028, \"graduation_year_max\": 2027, \"salary_text\": \"200-300元/天\", \"skills\": [\"Hive\", \"Java\", \"Kafka\", \"Flink\", \"SQL\"], \"required_skills\": [\"SQL\"], \"preferred_skills\": [\"Hive\", \"Java\", \"Kafka\", \"Flink\"], \"description\": \"【完全虚构数据】参与大数据开发，负责 ETL 数据质量与数据建模。要求 Hive Java Kafka Flink SQL，完成 SQL 开发与 pipeline 维护。\", \"longitude\": 113.8522537911651, \"latitude\": 22.593572834064222, \"coordinate_system\": \"GCJ02\", \"status\": \"active\", \"synthetic\": true, \"source_url\": null}"
+      }
+    ],
+    "unknown_locations_excluded": 28,
+    "salary_unknown": 106
+  },
+  "match_policy": {
+    "hard_filters": [
+      "最新快照仍有效",
+      "实习",
+      "本科可投",
+      "2027届在岗位范围内",
+      "目标数据开发类岗位",
+      "GCJ02 坐标完整",
+      "距翻身地铁站直线距离 ≤ 5 公里"
+    ],
+    "location": {
+      "name": "翻身地铁站（公共筛选中心示例）",
+      "coordinate_system": "GCJ02",
+      "longitude": 113.893232,
+      "latitude": 22.55969,
+      "radius_km": 5.0
+    },
+    "graduation_year": 2027,
+    "profile_skills": [
+      "python",
+      "sql",
+      "java",
+      "mysql",
+      "linux",
+      "git"
+    ],
+    "scoring": "Spark MLlib CountVectorizer → IDF → L2 Normalizer → cosine，分值0至1；先硬过滤，后排序。分值不是录用概率。",
+    "skill_requirement_boundary": "仅显式 required_skills 为技能硬要求；preferred_skills 用于解释，不阻止入选。skills 为未分级技能标签，不自动当作必须条件。没有从自由文本猜测要求。硬筛选通过不代表招聘资格得到认证。",
+    "limits": "文本相似度不是录用概率；缺少经历深度和技能熟练度。月薪折算按21.75天/月、8小时/天、12个月/年，不代表实际月收入。直线距离不是通勤距离。"
+  },
+  "model": {
+    "algorithm": "MLlib CountVectorizer + IDF + Normalizer",
+    "path": "warehouse/current/models/tfidf",
+    "status": "trained",
+    "vocabulary_size": 24,
+    "training_rows": 533,
+    "training_boundary": "当前最新有效岗位文本；本地示例采用无监督相似度，未做招聘结果监督验证"
+  },
+  "lineage": [
+    {
+      "layer": "ODS",
+      "path": "warehouse/ods",
+      "purpose": "不可变输入快照、原始行、批次哈希与来源",
+      "partitions": [
+        "batch_id",
+        "snapshot_date",
+        "source"
+      ]
+    },
+    {
+      "layer": "DWD",
+      "path": "warehouse/current/dwd",
+      "purpose": "规范化历史与最新快照、技能别名、事件时间去重",
+      "partitions": [
+        "snapshot_date/source",
+        "status/role"
+      ]
+    },
+    {
+      "layer": "DWS",
+      "path": "warehouse/current/dws",
+      "purpose": "技能需求、薪资汇总、as-of每日趋势与LAG窗口",
+      "partitions": [
+        "as_of_date"
+      ]
+    },
+    {
+      "layer": "ADS",
+      "path": "warehouse/current/ads",
+      "purpose": "硬过滤后的可解释岗位排名",
+      "partitions": [
+        "profile_id",
+        "snapshot_date"
+      ]
+    }
+  ],
+  "execution": {
+    "master": "local[2]",
+    "shuffle_partitions": "4",
+    "new_batch_ids": [],
+    "bounded_export_rows": 50,
+    "incremental_boundary": "ODS 按批次增量幂等；DWD/DWS/ADS 当前为可重建全量派生，非增量 merge 表格式",
+    "cache_hit": false,
+    "derived_rows_rebuilt": 778,
+    "fingerprint": "11caf06d6748ee74c7cf6f83123677cff3067f86917f770ba14c2425eb4cc619",
+    "example": true
+  },
+  "empty_state": null,
+  "snapshot_id": "public-example-0.2.0"
+}

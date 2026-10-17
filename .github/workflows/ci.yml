@@ -1,0 +1,25 @@
+name: Spark and API validation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v6.1.0
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install exact locked Python dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -r requirements.lock
+      - name: Real Spark edge cases, cache publication and API tests
+        run: ./scripts/test.sh
+      - name: Full synthetic pipeline and cache-hit verification
+        run: ./run-demo.sh --verify
