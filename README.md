@@ -6,6 +6,8 @@
 
 ## 快速开始
 
+在线样例：[招聘数据工作台](https://woxiangchuanaj.top/batch-analytics/) · [个人网站部署说明](deploy/README.md)。线上使用明确标注的公开虚构样例，未在该服务器运行 Spark。
+
 环境：Python 3.12、Java 17 或 21、[uv](https://docs.astral.sh/uv/getting-started/installation/)。在 macOS 自动发现 JDK，Linux 使用 `JAVA_HOME` 或 PATH 中的 Java。资源建议：2 个 CPU 核、约 2–3 GB 可用内存；测试环境为 `local[2]`。
 
 ```bash

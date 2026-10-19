@@ -1,0 +1,27 @@
+[Unit]
+Description=Batch Analytics public portfolio API
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/BATCH-ANALYTICS
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/var/www/BATCH-ANALYTICS/.venv/bin/python -m uvicorn portfolio_service.app:app --host 127.0.0.1 --port 8767 --root-path /batch-analytics --proxy-headers --forwarded-allow-ips=127.0.0.1 --limit-concurrency 32
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0027
+MemoryHigh=192M
+MemoryMax=256M
+TasksMax=64
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
